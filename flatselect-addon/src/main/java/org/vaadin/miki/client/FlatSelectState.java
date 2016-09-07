@@ -1,8 +1,11 @@
 package org.vaadin.miki.client;
 
-public class FlatSelectState extends com.vaadin.shared.AbstractComponentState {
+import com.vaadin.shared.ui.select.AbstractSelectState;
 
-    // State can have both public variable and bean properties
-    public String text = "FlatSelect";
+public class FlatSelectState extends AbstractSelectState {
+
+    public int value = -1;
+    public int optionsPerRow = 0;
+    public String[] options = new String[0];
 
 }

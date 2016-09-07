@@ -13,6 +13,8 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
+import java.util.Arrays;
+
 @Theme("demo")
 @Title("FlatSelect Add-on Demo")
 @SuppressWarnings("serial")
@@ -28,7 +30,10 @@ public class DemoUI extends UI
     protected void init(VaadinRequest request) {
 
         // Initialize our new UI component
-        final FlatSelect component = new FlatSelect();
+        final FlatSelect component = new FlatSelect("Pick one", Arrays.asList("options", "available", "in", "flat", "select", "are", "plenty"));
+        component.setOptionsPerRow(3);
+
+        component.addValueChangeListener(e -> component.setCaption(component.getItemCaption(e.getProperty().getValue())));
 
         // Show it in the middle of the screen
         final VerticalLayout layout = new VerticalLayout();

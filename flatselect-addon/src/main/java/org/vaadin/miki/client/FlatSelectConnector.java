@@ -1,5 +1,6 @@
 package org.vaadin.miki.client;
 
+import com.google.gwt.user.client.ui.SuggestOracle;
 import org.vaadin.miki.FlatSelect;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -22,30 +23,14 @@ public class FlatSelectConnector extends AbstractComponentConnector {
     // is automatically created here
     FlatSelectServerRpc rpc = RpcProxy.create(FlatSelectServerRpc.class, this);
 
-    public FlatSelectConnector() {
-        
-        // To receive RPC events from server, we register ClientRpc implementation 
-        registerRpc(FlatSelectClientRpc.class, new FlatSelectClientRpc() {
-            public void alert(String message) {
-                Window.alert(message);
-            }
-        });
+    private final FlatSelectWidget.Callback callback = new FlatSelectWidget.Callback() {
+        @Override
+        public void buttonClicked(int index) {
+            rpc.selected(index);
+        }
+    };
 
-        // We choose listed for mouse clicks for the widget
-        getWidget().addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
-                final MouseEventDetails mouseDetails = MouseEventDetailsBuilder
-                        .buildMouseEventDetails(event.getNativeEvent(),
-                                getWidget().getElement());
-                
-                // When the widget is clicked, the event is sent to server with ServerRpc
-                rpc.clicked(mouseDetails);
-            }
-        });
-
-    }
-
-    // We must implement getWidget() to cast to correct type 
+    // We must implement getWidget() to cast to correct type
     // (this will automatically create the correct widget type)
     @Override
     public FlatSelectWidget getWidget() {
@@ -62,9 +47,6 @@ public class FlatSelectConnector extends AbstractComponentConnector {
     @Override
     public void onStateChanged(StateChangeEvent stateChangeEvent) {
         super.onStateChanged(stateChangeEvent);
-
-        // State is directly readable in the client after it is set in server
-        final String text = getState().text;
-        getWidget().setText(text);
+        getWidget().setOptions(callback, getState().options, getState().optionsPerRow, getState().value);
     }
 }
