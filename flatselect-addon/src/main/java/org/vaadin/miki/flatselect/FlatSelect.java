@@ -1,9 +1,9 @@
-package org.vaadin.miki;
+package org.vaadin.miki.flatselect;
 
 import com.vaadin.data.Container;
 import com.vaadin.ui.AbstractSelect;
-import org.vaadin.miki.client.FlatSelectServerRpc;
-import org.vaadin.miki.client.FlatSelectState;
+import org.vaadin.miki.flatselect.client.FlatSelectServerRpc;
+import org.vaadin.miki.flatselect.client.FlatSelectState;
 
 import java.util.ArrayList;
 import java.util.Collection;

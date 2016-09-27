@@ -1,4 +1,4 @@
-package org.vaadin.miki;
+package org.vaadin.miki.flatselect;
 
 import junit.framework.Assert;
 import org.junit.Test;

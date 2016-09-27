@@ -1,4 +1,4 @@
-package org.vaadin.miki.client;
+package org.vaadin.miki.flatselect.client;
 
 import com.vaadin.shared.MouseEventDetails;
 import com.vaadin.shared.communication.ServerRpc;

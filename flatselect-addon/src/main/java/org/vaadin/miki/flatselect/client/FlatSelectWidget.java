@@ -1,4 +1,4 @@
-package org.vaadin.miki.client;
+package org.vaadin.miki.flatselect.client;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

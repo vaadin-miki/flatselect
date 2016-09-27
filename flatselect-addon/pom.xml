@@ -5,7 +5,7 @@
 	<groupId>org.vaadin.miki</groupId>
 	<artifactId>flatselect</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>FlatSelect - label-based select for Vaadin</name>
 
 	<prerequisites>
@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<vaadin.version>7.7.0</vaadin.version>
+		<vaadin.version>7.7.3</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 
 		<!-- ZIP Manifest fields -->
@@ -28,14 +28,14 @@
 		<Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 
-    <!--     
+    <!--
 	<organization>
-		<name>My Name</name>
-		<url>https://github.com/mygithubaccount/MyComponent/</url>
+		<name>org.vaadin.miki.flatselect</name>
+		<url>https://github.com/vaadin-miki/flatselect/</url>
 	</organization>
     
 	<scm>
-		<url>git://github.com/mygithubaccount/FlatSelect.git</url>
+		<url>git://github.com/vaadin-miki/flatselect.git</url>
 		<connection>scm:git:git://github.com/mygithubaccount/FlatSelect.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${componentClassName}.git</developerConnection>
 		<tag>FlatSelect add-on for Vaadin</tag>
@@ -124,7 +124,7 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-							<Vaadin-Widgetsets>org.vaadin.miki.WidgetSet</Vaadin-Widgetsets>
+							<Vaadin-Widgetsets>org.vaadin.miki.flatselect.WidgetSet</Vaadin-Widgetsets>
 						</manifestEntries>
 					</archive>
 				</configuration>

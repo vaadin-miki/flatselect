@@ -1,6 +1,6 @@
-package org.vaadin.miki.demo;
+package org.vaadin.miki.flatselect.demo;
 
-import org.vaadin.miki.FlatSelect;
+import org.vaadin.miki.flatselect.FlatSelect;
 
 import javax.servlet.annotation.WebServlet;
 
