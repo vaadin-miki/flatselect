@@ -5,7 +5,7 @@
 	<groupId>org.vaadin.miki</groupId>
 	<artifactId>flatselect</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.3</version>
 	<name>FlatSelect - label-based select for Vaadin</name>
 
 	<prerequisites>
