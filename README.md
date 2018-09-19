@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/flatselect---label-based-select-for-vaadin)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/flatselect---label-based-select-for-vaadin.svg)](https://vaadin.com/directory/component/flatselect---label-based-select-for-vaadin)
+
 # MyComponent Add-on for Vaadin 7
 
 ${ComponentClassName} is a UI component add-on for Vaadin 7.
